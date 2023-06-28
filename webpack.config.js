@@ -1,6 +1,6 @@
 module.exports = {
     presets: [
-        '@heroku-buildpack-static',
+        'heroku-buildpack-static',
 
     ]
 }
