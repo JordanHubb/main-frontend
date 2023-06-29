@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Partylist from '../views/Partylist'
 
-const routes = [
+const routes=[
   {
     path: '/',
     name: 'Home',
@@ -24,6 +24,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   linkActiveClass: 'active',
   routes
+
 })
 
 export default router

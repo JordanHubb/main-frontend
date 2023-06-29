@@ -1,15 +1,15 @@
 <template>
   <div class="container-fluid">
-    <partylist-overview :partyitem="this.partylist"></partylist-overview>
+
   </div>
 </template>
 
 <script>
-import PartylistOverview from "./components/PartylistOverview";
+//import PartylistOverview from "./components/PartylistOverview";
 export default {
 
   name: 'Partylist',
-  components: { PartylistOverview},
+ // components: { PartylistOverview},
   data() {
     return {
       partylist: []

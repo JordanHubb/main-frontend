@@ -5,8 +5,7 @@
     <p></p>
     <p></p>
     <p></p>
-    <div class="animalsLogo">
-      <img src="../assets/animals.png" className="head-img-top" alt="animals" align="middle">
+    <div>
     </div>
 
 
@@ -15,12 +14,10 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+ // components: {HelloWorld}
 }
 </script>
 <style>
