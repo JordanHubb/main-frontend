@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="partyLogo">
+  <img src="../assets/dance.jpeg" className="head-img-top" alt="Baby" align="left">
   </div>
   <div class="container">
     <h1 class="title"> Create your Partylist </h1>
@@ -31,8 +32,8 @@
   </table>
     <partylist-create-form> </partylist-create-form>
   </div>
-  <div>
-
+  <div class="ballonLogo">
+    <img src="../assets/ballon.jpeg" className="head-img-top" alt="Shower">
   </div>
 </template>
 
@@ -92,15 +93,10 @@ export default {
   padding-bottom: 50px;
   font-family: "Helvetica";
 }
-.babyLogo{
+.ballonLogo{
   display: flex;
   width: 400px;
   height: 240px;
 }
-.showerLogo{
-  width: 20px;
-  height: 100px;
-  margin-right: 100px;
-  margin-left: 800px;
-}
+
 </style>

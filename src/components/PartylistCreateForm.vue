@@ -4,7 +4,7 @@
           data-bs-toggle="offcanvas"
           data-bs-target="#partylist-create-offcanvas"
           aria-controls=#partylist-create-offcanva>
-    <i class="bi bi-partylist-plus-fill"></i>
+    <i class="partylist-plus-fill"></i>
     +
   </button>
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="partylist-create-offcanvas" aria-labelledby="offcanvasBottomLabel">
@@ -28,11 +28,11 @@
       </div>
       <div class="col-md-1">
         <label for="inputSupplies" class="form-label">Supplies</label>
-        <input type="text" class="form-control" id="inputSupplies" v-model="supplies" placeholder="0">
+        <input type="text" class="form-control" id="inputSupplies" v-model="supplies" placeholder="Write your party supplie here...">
       </div>
       <div class="col-md-1">
         <label for="inputPrice" class="form-label">Price</label>
-        <input type="text" class="form-control" id="inputPrice" v-model="price" placeholder="0">
+        <input type="text" class="form-control" id="inputPrice" v-model="price" placeholder="How much did it cost?">
       </div>
       <div class="col-md-2">
         <label for="inputBrought" class="form-label">Brought?</label>
@@ -43,7 +43,7 @@
         </select>
       </div>
       <div class="col-12">
-        <button type="button" @click="createParty" class="btn btn-dark me-3" >add party</button>
+        <button type="button" @click="createParty" class="btn btn-dark me-3" >add to party</button>
       </div>
     </form>
   </div>
