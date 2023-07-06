@@ -9,41 +9,46 @@
   </button>
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="partylist-create-offcanvas" aria-labelledby="offcanvasBottomLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Create another Party..</h5>
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Das ist dein Beitrag zur Party ...</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body small">
     <form @submit.prevent="createParty" class="row g-3">
       <div class="col-md-2">
-        <label for="inputDrinks" class="form-label">Drink</label>
-        <input type="drink" class="form-control" id="inputDrinks" v-model="drinks" placeholder="Write your drink here..." required>
+        <label for="inputName" class="form-label">Name</label>
+        <input type="name" class="form-control" id="inputName" v-model="name" placeholder="Wer hat es erfunden?" required>
       </div>
-      <div class="col-md-2">
-        <label for="inputFood" class="form-label">Food</label>
-        <input type="food" class="form-control" id="inputFood" v-model="food" placeholder="Write your food here...">
+      <div class="col-md-1">
+        <label for="inputDrinks" class="form-label">Getränk</label>
+        <input type="drink" class="form-control" id="inputDrinks" v-model="drinks" placeholder="Yummi..." required>
+      </div>
+      <div class="col-md-1">
+        <label for="inputFood" class="form-label">Speise</label>
+        <input type="food" class="form-control" id="inputFood" v-model="food" placeholder="lecker">
       </div>
       <div class="col-md-2">
         <label for="inputTrack" class="form-label">Track</label>
-        <input type="text" class="form-control" id="inputTrack" v-model="track" placeholder="Write your track here...">
-      </div>
-      <div class="col-md-1">
-        <label for="inputSupplies" class="form-label">Supplies</label>
-        <input type="text" class="form-control" id="inputSupplies" v-model="supplies" placeholder="Write your party supplie here...">
-      </div>
-      <div class="col-md-1">
-        <label for="inputPrice" class="form-label">Price</label>
-        <input type="text" class="form-control" id="inputPrice" v-model="price" placeholder="How much did it cost?">
+        <input type="text" class="form-control" id="inputTrack" v-model="track" placeholder="Let´s Rock!">
       </div>
       <div class="col-md-2">
-        <label for="inputBrought" class="form-label">Brought?</label>
-        <select id="inputBrought" v-model="brought" required class="form-select">
-          <option selected>Choose...</option>
-          <option>Still pending</option>
-          <option>Got it</option>
+        <label for="inputSupplies" class="form-label">Party Zubehör</label>
+        <input type="text" class="form-control" id="inputSupplies" v-model="supplies" placeholder="=D">
+      </div>
+      <div class="col-md-1">
+        <label for="inputPrice" class="form-label">Preis in €</label>
+        <input type="text" class="form-control" id="inputPrice" v-model="price" placeholder="...">
+      </div>
+
+      <div class="col-md-2">
+        <label class="form-label" for="inputBrought">Besorgt?</label>
+        <select class="form-select" id="inputBrought">
+          <option selected>Können wir damit rechnen?</option>
+          <option value="1">Ich bin noch dran..</option>
+          <option value="2">Ich hab es besorgt!</option>
         </select>
       </div>
       <div class="col-12">
-        <button type="button" @click="createParty" class="btn btn-dark me-3" >add to party</button>
+        <button type="button" @click="createParty" class="btn btn-dark me-3" >zu der Party hinzufügen!</button>
       </div>
     </form>
   </div>
@@ -71,6 +76,7 @@ export default {
       headers.append('Content-Type', 'application/json')
 
       const payload = JSON.stringify({
+        name: this.name,
         drinks: this.drinks,
         food: this.food,
         track: this.track,

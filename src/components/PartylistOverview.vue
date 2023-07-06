@@ -1,23 +1,25 @@
 <template>
   <div class="partyLogo">
-  <img src="../assets/dance.jpeg" className="head-img-top" alt="Baby" align="left">
+  <img src="../assets/dance.jpeg" className="head-img-top">
   </div>
   <div class="container">
-    <h1 class="title"> Create your Partylist </h1>
+    <h1 class="title"> Erstelle deine Partyliste </h1>
   <table className="table" bgcolor="#D4DDD3">
     <table className="col"></table>
     <thead>
     <tr>
-      <th scope="col"><font color="#E1B772">Drinks</font></th>
-      <th scope="col"><font color="#E1B772">Food</font></th>
+      <th scope="col"><font color="#E1B772">Name</font></th>
+      <th scope="col"><font color="#E1B772">Getränk</font></th>
+      <th scope="col"><font color="#E1B772">Speise</font></th>
       <th scope="col"><font color="#E1B772">Track</font></th>
-      <th scope="col"><font color="#E1B772">Supplies</font></th>
-      <th scope="col"><font color="#E1B772">Price</font></th>
-      <th scope="col"><font color="#E1B772">Brought?</font></th>
+      <th scope="col"><font color="#E1B772">Party Zubehör</font></th>
+      <th scope="col"><font color="#E1B772">Preis</font></th>
+      <th scope="col"><font color="#E1B772">Besorgt?</font></th>
     </tr>
     </thead>
     <tbody>
     <tr v-for="partyItem in partylist" :key="partyItem.id">
+      <td>{{ partyItem.name }}</td>
       <td>{{ partyItem.drinks }}</td>
       <td>{{ partyItem.food }}</td>
       <td>{{ partyItem.track }}</td>
@@ -31,9 +33,6 @@
     </tbody>
   </table>
     <partylist-create-form> </partylist-create-form>
-  </div>
-  <div class="ballonLogo">
-    <img src="../assets/ballon.jpeg" className="head-img-top" alt="Shower">
   </div>
 </template>
 

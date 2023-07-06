@@ -1,13 +1,13 @@
 <template>
   <div class="about">
-    <h1>Sit back and don't stress...</h1>
-    <p> On the application, by clicking on the plus (+) symbol, </p>
-    <p> you and your friends can add all the items for your party to the table.</p>
-    <p> </p>
-    <p> </p>
-    <p>We hope that all your parties will be phenomenal!</p>
-    <p> Please note: Make sure you fill all boxes and refresh the page if your entries are not showing.</p>
-
+    <h1>Probiers mal mit Gemütlichkeit...</h1>
+    <p> Klicke in der Anwendung auf das Pluszeichen (+), so </p>
+    <p> können du und deine Freunde alle mitgebrachten Dinge für die Party auflisten.</p>
+    <p>Wir hoffen, dass alle deine Partys phänomenal werden!</p>
+    <p> Bitte beachte: Füllen alle Felder aus und drücke auf den "zu der Party hinzufügen!" Button, dann aktualisierst du Seite. Nun sollte dein Beitrag, zu der Party, auf der Liste stehen.</p>
+    <div class="ballonLogo">
+      <img src="../assets/ballon.jpeg" className="head-img-top" >
+    </div>
   </div>
 </template>
 <script>

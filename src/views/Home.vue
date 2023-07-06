@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Partytime!"/>
+    <HelloWorld msg="Zeit für eine Party!!!"/>
     <p></p>
     <p></p>
     <p></p>
