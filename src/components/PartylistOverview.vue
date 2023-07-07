@@ -8,13 +8,13 @@
     <table className="col"></table>
     <thead>
     <tr>
-      <th scope="col"><font color="#E1B772">Name</font></th>
-      <th scope="col"><font color="#E1B772">Getränk</font></th>
-      <th scope="col"><font color="#E1B772">Speise</font></th>
-      <th scope="col"><font color="#E1B772">Track</font></th>
-      <th scope="col"><font color="#E1B772">Party Zubehör</font></th>
-      <th scope="col"><font color="#E1B772">Preis</font></th>
-      <th scope="col"><font color="#E1B772">Besorgt?</font></th>
+      <th scope="col"><font color="#8BC34A">Name</font></th>
+      <th scope="col"><font color="#FF5722">Getränk</font></th>
+      <th scope="col"><font color="#2196F3">Speise</font></th>
+      <th scope="col"><font color="#FFC107">Track</font></th>
+      <th scope="col"><font color="#9C27B0">Party Zubehör</font></th>
+      <th scope="col"><font color="#F44336">Preis</font></th>
+      <th scope="col"><font color="#673AB7">Besorgt?</font></th>
     </tr>
     </thead>
     <tbody>
@@ -25,8 +25,8 @@
       <td>{{ partyItem.track }}</td>
       <td>{{ partyItem.supplies }}</td>
       <td>{{ partyItem.price }}</td>
-      <td>{{ partyItem.brought ? 'Got it' : 'Still pending' }}</td>
-      <button class="btn" type="submit"  @click="deletePartyitem(partyItem.id)" :key="partyItem.id" style="font-size: small">
+      <td>{{ partyItem.brought? 'Ich bin noch dran..' : 'Ich hab es besorgt!' }}</td>
+      <button class="btn" type="submit"  @click="deletePartyitem(partyItem.id)" key="partyItem.id" style="font-size: small">
         <i class="fas fa-trash"></i>
       </button>
     </tr>
@@ -91,11 +91,6 @@ export default {
   padding-top: 50px;
   padding-bottom: 50px;
   font-family: "Helvetica";
-}
-.ballonLogo{
-  display: flex;
-  width: 400px;
-  height: 240px;
 }
 
 </style>

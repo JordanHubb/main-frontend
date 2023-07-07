@@ -16,37 +16,39 @@
     <form @submit.prevent="createParty" class="row g-3">
       <div class="col-md-2">
         <label for="inputName" class="form-label">Name</label>
-        <input type="name" class="form-control" id="inputName" v-model="name" placeholder="Wer hat es erfunden?" required>
+        <input type="name" class="form-control" id="inputName" v-model="name" placeholder="Wer hat es erfunden?" >
       </div>
       <div class="col-md-1">
         <label for="inputDrinks" class="form-label">Getränk</label>
-        <input type="drink" class="form-control" id="inputDrinks" v-model="drinks" placeholder="Yummi..." required>
+        <input type="drink" class="form-control" id="inputDrinks" v-model="drinks" placeholder="Yummi...">
       </div>
       <div class="col-md-1">
         <label for="inputFood" class="form-label">Speise</label>
         <input type="food" class="form-control" id="inputFood" v-model="food" placeholder="lecker">
       </div>
       <div class="col-md-2">
-        <label for="inputTrack" class="form-label">Track</label>
-        <input type="text" class="form-control" id="inputTrack" v-model="track" placeholder="Let´s Rock!">
+        <label for="inputTrack" class="form-label">Supplies</label>
+        <input type="track" class="form-control" id="inputTrack" v-model="track" placeholder="=D">
       </div>
       <div class="col-md-2">
-        <label for="inputSupplies" class="form-label">Party Zubehör</label>
-        <input type="text" class="form-control" id="inputSupplies" v-model="supplies" placeholder="=D">
+        <label for="inputSupplies" class="form-label">Track</label>
+        <input type="supplies" class="form-control" id="inputSupplies" v-model="supplies" placeholder="Let´s Rock!">
       </div>
       <div class="col-md-1">
         <label for="inputPrice" class="form-label">Preis in €</label>
-        <input type="text" class="form-control" id="inputPrice" v-model="price" placeholder="...">
+        <input type="price" class="form-control" id="inputPrice" v-model="price" placeholder="...">
       </div>
 
       <div class="col-md-2">
-        <label class="form-label" for="inputBrought">Besorgt?</label>
-        <select class="form-select" id="inputBrought">
+        <label  for="inputBrought" class="form-label">Besorgt?</label>
+        <select  id="inputBrought" class="form-select">
           <option selected>Können wir damit rechnen?</option>
-          <option value="1">Ich bin noch dran..</option>
-          <option value="2">Ich hab es besorgt!</option>
+          <option>Ich bin noch dran..</option>
+          <option>Ich hab es besorgt!</option>
         </select>
       </div>
+
+
       <div class="col-12">
         <button type="button" @click="createParty" class="btn btn-dark me-3" >zu der Party hinzufügen!</button>
       </div>
@@ -65,7 +67,7 @@ export default {
       track: '',
       supplies: '',
       price:'',
-      brought: false
+      brought:''
     }
   },
   methods: {
@@ -82,8 +84,7 @@ export default {
         track: this.track,
         supplies: this.supplies,
         price:this.price,
-        brought: this.brought === "Got it" ? true : false
-      })
+        brought: this.brought  })
 
       const requestOptions = {
         method: 'POST',
